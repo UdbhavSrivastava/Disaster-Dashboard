@@ -66,8 +66,8 @@ def get_feature_data():
     tower_data_file = 'hurricane/tower_data.csv'
     amenities_file_name = 'hurricane/amenities.csv'
     
-    tower_df = pd.read_csv(tower_data_file)
-
+    #tower_df = pd.read_csv(tower_data_file)
+    tower_df = 1
     amenities_df = pd.read_csv(amenities_file_name, index_col=0)
 
     restaurant_df = amenities_df[amenities_df['amenity_type']=='Restaurant']
@@ -223,7 +223,7 @@ restaurants  = restaurants[restaurants['county'].isin(selected_county)]
 hospitals  = hospitals[hospitals['county'].isin(selected_county)]
 fire_stations  = fire_stations[fire_stations['county'].isin(selected_county)]
 parkings  = parkings[parkings['county'].isin(selected_county)]
-tower_coordinates = get_tower_coordinates(tower_df, selected_county)
+#tower_coordinates = get_tower_coordinates(tower_df, selected_county)
 
     #tower_coordinates = get_tower_coordinates(tower_df)
 walk_ind_dict, gross_pop_density_dict, tot_pop_dict, gdf = get_gdf_data()
